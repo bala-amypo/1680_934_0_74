@@ -15,7 +15,7 @@ import com.example.demo.entity.Student;
 import com.exemple.demo.service. Student Service;
 @CrossOrigin(origins="*")
 @RestController
-public class StudentController {}
+public class StudentController{ 
 @Autowired
 StudentService studentService;
 @PostMapping("/PostStudent")
@@ -30,17 +30,18 @@ return studentService.getOneStudent(id);
 @PutMapping("/update/{id}")
 public String update (@PathVariable Long id, @RequestBody Student
 newStudent) Optional<Student> student studentService.getOneStudent(id);
-if(student.isPresent())(
+if(student.isPresent()){ 
 newStudent.setId(id);
 studentService, InsertStudent(newStudent);
 return "Updated Success"
 }
 return "Id not found";
 @DeleteMapping("/del/(id)")
-public String deleteStudent (@PathVariable Long id)(
+public String deleteStudent (@PathVariable Long id){ 
 Optional<Student> student-studentService.getOneStudent(id);
 1+(student.IsPresent()) {
 studentService.deleteStudent(id);
 return "Deleted Success";
 return "Id Not Found";
 1
+}

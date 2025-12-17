@@ -7,13 +7,13 @@ import jakarta.persistence.Id;
 @Entity
 public class Student {
 @Id
-@GeneratedValue(strategy-GenerationType. IDENTITY)
+@GeneratedValue(strategy=GenerationType. IDENTITY)
 private Long id;
 private String name;
 private String email;
 private LocalDate dob;
 private float cgpa;
-public Long getId() [
+public Long getId() {
 return id;
 }
 public void setId(Long id) {
@@ -27,15 +27,21 @@ this.name = name;
 }
 public String getEmail() {
 return email;
-1
-public void setEmail(String email (
-this.email email;
+}
+public void setEmail(String email ){
+this.email =email;
+}
 public LocalDate getDob() {
 return dob:
-public void setDob (LocalDate dob) (
-this dob dob;
-public float getCgpa() (
+}
+public void setDob (LocalDate dob) {
+this dob =dob;
+}
+public float getCgpa() {
 return cgpa;
-public void setcgpa(float cgpa) (
-this.cgpa cgpa;
+}
+public void setcgpa(float cgpa) {
+this.cgpa =cgpa;
+}
+
 }
